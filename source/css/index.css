@@ -156,7 +156,7 @@ body {
 }
 
 nav {
-  max-width: 80%;
+  width: 80%;
   margin-left: 300px;
   position: fixed;
   top: 0;
@@ -253,6 +253,8 @@ nav {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   grid-gap: 30px;
+  /* flex-direction: row;
+  overflow-x: scroll; */
 }
 
 .cardBox .card {
@@ -312,6 +314,7 @@ nav {
   padding: 20px;
   box-shadow: 0 7px 25px rgba(0, 0, 0, 0.08);
   border-radius: 20px;
+  background-color: var(--black2);
 }
 
 .details .cardHeader {
@@ -462,6 +465,12 @@ nav {
 }
 
 @media (max-width: 768px) {
+  nav {
+    margin-left: 0px;
+  }
+  .search {
+    width: 580px;
+  }
   .details {
     grid-template-columns: 1fr;
   }
@@ -474,22 +483,69 @@ nav {
 }
 
 @media (max-width: 480px) {
+  .toggle {
+    width: 50px;
+    height: 50px;
+    font-size: 2rem;
+  }
+
+  .user {
+    height: 32px;
+    width: 32px;
+  }
+  .user img {
+    width: 100%;
+    height: 100%;
+  }
+  .group-notif-profile {
+    height: 40px;
+    width: 30%;
+  }
+  .group-menu-and-search{
+    width: 68%;
+  }
+  .topbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  #notification {
+    font-size: 22px;
+    display: flex;
+    align-items: center;
+  }
+
+  #image-logo {
+    width: 34px;
+    height: 34px;
+  }
+
+  .search label input  {
+    height: 32px;
+    font-size: 12px;
+  }
+  nav {
+    margin-left: 0px;
+    width: 100%;
+
+  }
+  .search {
+    width: 200px;
+  }
   .cardBox {
     grid-template-columns: repeat(1, 1fr);
   }
   .cardHeader h2 {
     font-size: 20px;
   }
-  .user {
-    min-width: 40px;
-  }
   .navigation {
     width: 100%;
+    top: 50px;
     left: -100%;
     z-index: 1000;
   }
   .navigation.active {
-    width: 100%;
+    width: 70%;
     left: 0;
   }
   .toggle {
