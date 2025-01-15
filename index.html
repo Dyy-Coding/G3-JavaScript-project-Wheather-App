@@ -1,39 +1,208 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=], initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Weather World</title>
-    <!-- link icon -->
-     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
-
-     <!-- link css -->
-     <link rel="stylesheet" href="./css/index.css">
-
-     <!-- link bootstrap-5 -->
-     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-     
+    <!-- ======= Styles ====== -->
+    <link rel="stylesheet" href="./source/css/index.css">
+    <!-- ======= Favicon ====== -->
+     <link rel="shortcut icon" href="./assets/image-icon/logo-favicon.png" type="image/x-icon">
 
 </head>
+
 <body>
+    <!-- =============== Navigation ================ -->
+    <div class="container">
+        <div class="navigation">
+            <ul>
+                <li>
+                    <a href="#">
+                        <span class="icon">
+                            <img id="image-logo" src="./assets/image-icon/logo-favicon.png" alt="logo-weather-app">
+                        </span>
+                        <span class="title">Weather World</span>
+                    </a>
+                </li>
 
-    <!-- sidebar nav  -->
-     <header>
-        <ul class="nav flex-column">
-            <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="#">Active</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Link</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Link</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
-            </li>
-          </ul>
-     </header>
+                <li>
+                    <a href="#">
+                        <span class="icon">
+                            <ion-icon name="home-outline"></ion-icon>
+                        </span>
+                        <span  class="title">Home</span>
+                    </a>
+                </li>
 
+                <li>
+                    <a href="#">
+                        <span class="icon">
+                            <ion-icon name="cloud-outline"></ion-icon>
+                        </span>
+                        <span class="title">Forecast</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#">
+                        <span class="icon">
+                            <ion-icon name="analytics-outline"></ion-icon>
+                        </span>
+                        <span class="title">Analytic</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#">
+                        <span class="icon">
+                            <ion-icon name="location-outline"></ion-icon>
+                        </span>
+                        <span class="title">Location</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <span class="icon">
+                            <ion-icon name="calendar-outline"></ion-icon>
+                        </span>
+                        <span class="title">Calendar</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#">
+                        <span class="icon">
+                            <ion-icon name="settings-outline"></ion-icon>
+                        </span>
+                        <span class="title">Settings</span>
+                    </a>
+                </li>
+
+
+                <li>
+                    <a href="#">
+                        <span class="icon">
+                            <ion-icon name="person-add-outline"></ion-icon>
+                        </span>
+                        <span class="title">Add new account</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <span class="icon">
+                            <ion-icon name="log-out-outline"></ion-icon>
+                        </span>
+                        <span class="title">Sign Out</span>
+                    </a>
+                </li>
+            </ul>
+
+        </div>
+        <nav>
+            <div class="topbar">
+                <div class="group-menu-and-search">
+                    <div class="toggle">
+                        <ion-icon name="menu-outline"></ion-icon>
+                    </div>
+    
+                    <div class="search">
+                        <label>
+                            <input type="search" placeholder="Search here">
+                            <ion-icon name="search-outline"></ion-icon>
+                        </label>
+                    </div>
+                </div>
+                <div class="group-notif-profile">
+                    <div class="notification">
+                        <ion-icon name="notifications-outline" id="notification"></ion-icon>
+                    </div>
+                    <div class="user">
+                        <img src="./assets/image/photo_2024-11-11_18-45-00.jpg" alt="">
+                    </div>
+                </div>
+            </div>
+        </nav>
+
+        <!-- ========================= Main ==================== -->
+        <div class="main">
+            <!-- ======================= Cards ================== -->
+            <div class="cardBox">
+                <div class="card">
+                    <div>
+                        <div class="numbers">-----</div>
+                        <div class="cardName">-----</div>
+                    </div>
+
+                    <div class="iconBx">
+                        <img src="" alt="cloud-logo">
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div>
+                        <div class="numbers">-----</div>
+                        <div class="cardName">-----</div>
+                    </div>
+
+                    <div class="iconBx">
+                        <img src="" alt="cloud-logo">
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div>
+                        <div class="numbers">----</div>
+                        <div class="cardName">-----</div>
+                    </div>
+
+                    <div class="iconBx">
+                        <img src="" alt="cloud-logo">
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div>
+                        <div class="numbers">-----</div>
+                        <div class="cardName">-----</div>
+                    </div>
+
+                    <div class="iconBx">
+                        <img src="" alt="cloud-logo">
+                    </div>
+                </div>
+            </div>
+
+            <!-- ================  Details List of weather ================= -->
+            <div class="details">
+                <div class="recentOrders">
+                    <div class="cardHeader">
+                        <h2>----</h2>
+                        <a href="#" class="btn">-----</a>
+                    </div>
+
+                  <!-- content -->
+                </div>
+
+                <!-- ================= New Weather ================ -->
+                <div class="recentCustomers">
+                    <div class="cardHeader">
+                        <h2>-----</h2>
+                    </div>
+
+                  <!-- content -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- =========== Scripts =========  -->
+    <script src="./source/js/index.js"></script>
+
+    <!-- ====== ionicons ======= -->
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 </body>
+
 </html>
