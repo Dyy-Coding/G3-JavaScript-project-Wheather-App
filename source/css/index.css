@@ -163,10 +163,11 @@ body {
   position: fixed;
   top: 0;
   z-index: 100;
-  background-color: white;
 }
 .head {
   width: 100%;
+  background-color: white;
+  z-index: 100;
 }
 .main {
   position: absolute;
@@ -329,9 +330,9 @@ body {
 
 
 .image {
-  width: 30%;
+  width: 38%;
   height: 98%; /* Take up 1 part of the flex */
-  padding: 12px 0px;
+  padding: 10px 4px;
 }
 
 .image img {
@@ -342,7 +343,7 @@ body {
 }
 
 .information {
-  width: 60%; /* Take up 2 parts of the flex */
+  width: 56%; /* Take up 2 parts of the flex */
   padding: 12px; /* Padding around the text */
   display: flex;
   flex-direction: column;
@@ -445,14 +446,14 @@ body {
   justify-content: space-evenly;
   align-items: center;
   flex-direction: column;
-  min-height: 500px;
+  min-height: 400px;
   padding: 20px;
   background: var(--white);
   box-shadow: 0 7px 25px rgba(0, 0, 0, 0.08);
   border-radius: 20px;
 }
 #imag-news-weather {
-  width: 400px;
+  width: 300px;
   height: 200px;
   border-radius: 10px;
 }
@@ -471,7 +472,7 @@ body {
   border-radius: 10px;
 }
 #title-news, #detial-of-news {
-  width: 400px;
+  width: 300px;
 }
 
 
