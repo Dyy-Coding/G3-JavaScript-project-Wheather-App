@@ -21,9 +21,9 @@ toggle.onclick = function () {
   main.classList.toggle("active");
 };
 
+
 //================card-box run =====================
 
-// Ensure this script runs after the DOM is fully loaded
 document.addEventListener('DOMContentLoaded', () => {
   const cardBox = document.querySelector('.cardBox'); // Select the card box
   const cards = document.querySelectorAll('.card'); // Select all cards
