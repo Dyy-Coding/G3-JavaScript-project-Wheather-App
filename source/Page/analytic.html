@@ -105,7 +105,7 @@
                         </div>
                         <div class="search">
                             <label>
-                                <input type="search" placeholder="Search here">
+                                <input type="search" placeholder="Search here" aria-label="Search weather-related data">
                                 <ion-icon name="search-outline"></ion-icon>
                             </label>
                         </div>
@@ -118,7 +118,7 @@
                         </a>
                         <a href="./profile.html">
                             <div class="user">
-                                <img src="../../assets/image/photo_2024-11-11_18-45-00.jpg" alt="">
+                                <img src="../../assets/image/photo_2024-11-11_18-45-00.jpg" alt="User profile picture">
                             </div>
                         </a>
                     </div>
@@ -127,7 +127,7 @@
         </header>
 
         <!-- ========================= Main ==================== -->
-        <main>
+        <div class="main">
             <div class="analytics-container">
                 <!-- Today's Weather -->
                 <section class="today-weather">
@@ -185,56 +185,16 @@
                 <!-- Temperature Chart -->
                 <section class="temperature-chart">
                     <h2>Temperature Over the Week</h2>
-                    <canvas id="temperatureChart" width="400" height="200"></canvas>
+                    <canvas id="temperatureChart" width="200" height="100"></canvas>
                 </section>
             </div>
-        </main>
+        </div>
     </div>
 
     <!-- ====== Chart.js ======= -->
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-    <script>
-        // Example data for the chart
-        const days = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'];
-        const temperatures = [22, 24, 19, 21, 23, 25, 20];  // Replace with actual data
-
-        const ctx = document.getElementById('temperatureChart').getContext('2d');
-        const temperatureChart = new Chart(ctx, {
-            type: 'line',
-            data: {
-                labels: days,
-                datasets: [{
-                    label: 'Temperature (°C)',
-                    data: temperatures,
-                    backgroundColor: 'rgba(75, 192, 192, 0.2)',
-                    borderColor: 'rgba(75, 192, 192, 1)',
-                    borderWidth: 2,
-                    fill: true,
-                }]
-            },
-            options: {
-                responsive: true,
-                scales: {
-                    y: {
-                        beginAtZero: true,
-                        title: {
-                            display: true,
-                            text: 'Temperature (°C)'
-                        }
-                    },
-                    x: {
-                        title: {
-                            display: true,
-                            text: 'Days'
-                        }
-                    }
-                }
-            }
-        });
-    </script>
-
-    <!-- =========== Scripts =========  -->
-    <script src="../../source/js/index.js"></script>
+    <script src="../js/page-js/analytic.js"></script>
+    <script src="../js/index.js"></script>
     <!-- ====== ionicons ======= -->
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
