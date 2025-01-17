@@ -5,7 +5,7 @@
   }
   
   .analytics-container {
-    max-width: 1200px;
+    max-width: 1300px;
   }
   
   /* Today's Weather Section */
@@ -68,6 +68,7 @@
   .temperature-chart h2 {
     margin-bottom: 15px;
   }
+  
   
   /* Responsive Design */
   @media (max-width: 768px) {
