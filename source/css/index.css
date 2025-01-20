@@ -140,6 +140,27 @@ body {
 
 
 /* ===================== Main ===================== */
+.suggestions {
+  max-height: 200px;
+  width: 100%;
+  overflow-y: auto;
+  position: absolute; /* Adjust as needed */
+  background: white; /* Ensure it's visible */
+  border: none;
+  border-radius: 12px;
+  box-shadow: rgba(0, 0, 0, 0.45) 0px 25px 20px -20px;
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+
+.suggestion-item {
+  padding: 20px;
+  cursor: pointer;
+}
+
+.suggestion-item:hover {
+  background-color: #f0f0f0; /* Highlight on hover */
+}
 .group-menu-and-search, .group-notif-profile {
   
   display: flex;
@@ -489,6 +510,99 @@ body {
 
 #image-logo-responsive {
   display: none;
+}
+
+/* From Uiverse.io by eduardo-amaro-maciel */ 
+.scroll-1::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+.scroll-1::-webkit-scrollbar-thumb {
+  border-radius: 20px;
+  background: #888;
+}
+
+.container__of__card * {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  color: #fff;
+}
+
+.container__of__card {
+  display: flex;
+  overflow-x: scroll;
+  padding: 24px;
+  width: 300px;
+  scroll-snap-type: x mandatory;
+  scroll-padding-top: 24px;
+  border-radius: 8px;
+  gap: 20px;
+}
+
+.container__of__card .card__container {
+  flex: 0 0 100%;
+  overflow: hidden;
+  border-radius: 8px;
+  background-color: #141414;
+  scroll-snap-align: start;
+}
+
+.card__container .card__image {
+  flex: 1;
+  height: 140px;
+}
+
+.card__container:nth-child(1) .card__image {
+  background-image: linear-gradient(
+      to right top,
+      #051937, 
+      #004d7a, 
+      #008793, 
+      #00bf72, 
+      #a8eb12
+  );
+}
+
+.card:nth-child(2) .card__image {
+  background-image: linear-gradient(
+    to right top, 
+    #dc09a5, 
+    #ce00b4, 
+    #ba00c5, 
+    #9c00d8, 
+    #6f12eb
+  );
+}
+
+.card:nth-child(3) .card__image {
+  background-image: linear-gradient(
+    to right top, 
+    #dc1009, 
+    #e55f00, 
+    #e49200, 
+    #dac000, 
+    #c7eb12
+  );
+}
+
+.card__container .card__content {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 20px;
+}
+
+.card__container .card__content .card__title {
+  font-size: 32px;
+  color: #fff;
+  text-transform: capitalize;
+}
+
+.card__container .card__content .card__describe {
+  color: #fff;
+  font-size: 16px;
 }
 
 

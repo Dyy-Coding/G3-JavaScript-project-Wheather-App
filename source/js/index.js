@@ -48,8 +48,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
 //=====================profile=================================//
 
-document.querySelector('.post-form').addEventListener('submit', (e) => {
-  e.preventDefault();
+document.querySelector('.post-form').addEventListener('click', () => {
+  // e.preventDefault();
   const title = document.getElementById('post-title').value;
   const media = document.getElementById('post-media').files[0];
   const details = document.getElementById('post-details').value;
@@ -187,5 +187,7 @@ searchButton.addEventListener('click', () => {
 // Display history on page load
 document.addEventListener('DOMContentLoaded', displayHistory);
 //===================================================//
+
+
 
 
