@@ -9,3 +9,9 @@ registerBtn.addEventListener('click', () => {
 loginBtn.addEventListener('click', () => {
     container.classList.remove("active");
 });
+
+function loadFile(event) {
+    const output = document.getElementById('output');
+    output.src = URL.createObjectURL(event.target.files[0]);
+    output.style.display = 'block'; // Show the image
+}
