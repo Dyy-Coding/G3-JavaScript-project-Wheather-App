@@ -18,3 +18,5 @@ export function weatherIcon(imageName) {
 
   return iconsValues[iconIndex];
 }
+
+

@@ -1,0 +1,82 @@
+/* Main Section */
+.main {
+    flex-grow: 1;
+    padding: 20px;
+  }
+  
+  .analytics-container {
+    max-width: 1300px;
+  }
+  
+  /* Today's Weather Section */
+  .today-weather {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    border: solid rgb(15, 208, 208) 0.5px;
+    margin-bottom: 20px;
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+  }
+  
+  .today-weather h2 {
+    margin-bottom: 15px;
+  }
+  
+  .weather-card {
+    padding: 15px;
+    border: 1px solid #e5e7eb;
+    border-radius: 6px;
+    background-color: #f9fafb;
+  }
+  
+  /* Weekly Forecast Section */
+  .weekly-forecast {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+  
+  .weekly-forecast h2 {
+    margin-bottom: 15px;
+  }
+  
+  .forecast-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: 15px;
+  }
+  
+  .forecast-item {
+    padding: 15px;
+    border: solid rgb(15, 208, 208) 0.5px;
+    border-radius: 6px;
+    text-align: center;
+    background-color: #f9fafb;
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+  }
+  
+  /* Temperature Chart Section */
+  .temperature-chart {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+  
+  .temperature-chart h2 {
+    margin-bottom: 15px;
+  }
+  
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .navigation {
+      width: 200px;
+    }
+  
+    .forecast-list {
+      grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+    }
+  }
