@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather World</title>
+    <!-- ======= Styles ====== -->
+    <link rel="stylesheet" href="../css/calendar.css">
+    <!-- ======= Favicon ====== -->
+    <link rel="shortcut icon" href="../assets/image-icon/logo-favicon.png" type="image/x-icon">
+</head>
+
+<body>
+    <!-- =============== Navigation ================ -->
+    <div class="container">
+        <div class="navigation">
+            <ul>
+                <li>
+                    <a href="#">
+                        <span class="icon">
+                            <img id="image-logo" src="../../assets/image-icon/logo-favicon.png" alt="logo-weather-app">
+                        </span>
+                        <span class="title">WForecast</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="../../index.html">
+                        <span class="icon">
+                            <ion-icon name="home-outline"></ion-icon>
+                        </span>
+                        <span class="title">Home</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="./forecast.html">
+                        <span class="icon">
+                            <ion-icon name="cloud-outline"></ion-icon>
+                        </span>
+                        <span class="title">Forecast</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="./analytic.html">
+                        <span class="icon">
+                            <ion-icon name="analytics-outline"></ion-icon>
+                        </span>
+                        <span class="title">Analytic</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="./location.html">
+                        <span class="icon">
+                            <ion-icon name="location-outline"></ion-icon>
+                        </span>
+                        <span class="title">Location</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <span class="icon">
+                            <ion-icon name="calendar-outline"></ion-icon>
+                        </span>
+                        <span class="title">Calendar</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="./setting.html">
+                        <span class="icon">
+                            <ion-icon name="settings-outline"></ion-icon>
+                        </span>
+                        <span class="title">Settings</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="./add-new-account.html">
+                        <span class="icon">
+                            <ion-icon name="person-add-outline"></ion-icon>
+                        </span>
+                        <span class="title">Add new account</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="./sign-out.html">
+                        <span class="icon">
+                            <ion-icon name="log-out-outline"></ion-icon>
+                        </span>
+                        <span class="title">Sign Out</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+
+        <nav>
+            <div class="topbar">
+                <div class="group-menu-and-search">
+                    <div class="toggle">
+                        <ion-icon name="menu-outline"></ion-icon>
+                    </div>
+                    <div class="search">
+                        <label>
+                            <input type="search" placeholder="Search here">
+                            <ion-icon name="search-outline"></ion-icon>
+                        </label>
+                    </div>
+                </div>
+                <div class="group-notif-profile">
+                    <div class="notification">
+                        <ion-icon name="notifications-outline" id="notification"></ion-icon>
+                    </div>
+                    <div class="user">
+                        <img src="../../assets/image/ly.png" alt="">
+                    </div>
+                </div>
+            </div>
+        </nav>
+
+        <!-- ========================= Main ==================== -->
+        <div class="main">
+            <div class="container">
+                
+                <div class="calendar">
+                    <h1>Google Calendar Weather</h1>
+                    <div class="calendar-grid">
+                        <div>Sun</div>
+                        <div>Mon</div>
+                        <div>Tu</div>
+                        <div>Wed</div>
+                        <div>Thu</div>
+                        <div>Fri</div>
+                        <div>Sat</div>
+
+                        <div>29<img class="weather-icon" src="../../assets/image-icon/rain.png" alt="Sunny"></div>
+                        <div>30<img class="weather-icon" src="../../assets/image-icon/sun.png" alt="Sunny"></div>
+                        <div>31<img class="weather-icon" src="../../assets/image-icon/sun.png" alt="Rain"></div>
+                        <div>1<img class="weather-icon" src="../../assets/image-icon/black.png" alt="Cloudy"></div>
+                        <div>2<img class="weather-icon" src="../../assets/image-icon/sun.png" alt="Cloudy"></div>
+                        <div>3<img class="weath
+                            er-icon" src="../../assets/image-icon/Lightning.png" alt="Sunny"></div>
+                        <div>4<img class="weather-icon" src="../../assets/image-icon/sun.png" alt="Cloudy"></div>
+
+                        <div>5<img class="weather-icon" src="../../assets/image-icon/sun.png" alt="Cloudy"></div>
+                        <div>6<img class="weather-icon" src="../../assets/image-icon/sun.png" alt="Cloudy"></div>
+                        <div>7<img class="weather-icon" src="../../assets/image-icon/rain.png" alt="Cloudy"></div>
+                        <div>8<img class="weather-icon" src="../../assets/image-icon/sun.png" alt="Cloudy"></div>
+                        <div>9<img class="weather-icon" src="../../assets/image-icon/black.png" alt="Cloudy"></div>
+                        <div>10<img class="weather-icon" src="../../assets/image-icon/sun.png" alt="Cloudy"></div>
+                        <div>11<img class="weather-icon" src="../../assets/image-icon/sun.png" alt="Cloudy"></div>
+
+                        <div>12<img class="weather-icon" src="../../assets/image-icon/Lightning.png" alt="Rain"></div>
+                        <div>13<img class="weather-icon" src="../../assets/image-icon/sun.png" alt="Cloudy"></div>
+                        <div>14<img class="weather-icon" src="../../assets/image-icon/sun.png" alt="Cloudy"></div>
+                        <div>15<img class="weather-icon" src="../../assets/image-icon/black.png" alt="Sunny"></div>
+                        <div>16<img class="weather-icon" src="../../assets/image-icon/sun.png" alt="Cloudy"></div>
+                        <div>17<img class="weather-icon" src="../../assets/image-icon/sun.png" alt="Cloudy"></div>
+                        <div>18<img class="weather-icon" src="../../assets/image-icon/sun.png" alt="Cloudy"></div>
+
+
+                        <div>19<img class="weather-icon" src="../../assets/image-icon/rain.png" alt="Cloudy"></div>
+                        <div>20<img class="weather-icon" src="../../assets/image-icon/sun.png" alt="Cloudy"></div>
+                        <div>21<img class="weather-icon" src="../../assets/image-icon/sun.png" alt="Cloudy"></div>
+                        <div>22<img class="weather-icon" src="../../assets/image-icon/Lightning.png" alt="Cloudy"></div>
+                        <div>23<img class="weather-icon" src="../../assets/image-icon/sun.png" alt="Cloudy"></div>
+                        <div>24<img class="weather-icon" src="../../assets/image-icon/sun.png" alt="Cloudy"></div>
+                        <div>25<img class="weather-icon" src="../../assets/image-icon/rain.png" alt="Cloudy"></div>
+
+
+                        <div>26<img class="weather-icon" src="../../assets/image-icon/sun.png" alt="Cloudy"></div>
+                        <div>27<img class="weather-icon" src="../../assets/image-icon/sun.png" alt="Cloudy"></div>
+                        <div>28<img class="weather-icon" src="../../assets/image-icon/sun.png" alt="Cloudy"></div>
+                        <div>29<img class="weather-icon" src="../../assets/image-icon/rain.png" alt="Cloudy"></div>
+                        <div>30<img class="weather-icon" src="../../assets/image-icon/rain.png" alt="Cloudy"></div>
+                        <div>31<img class="weather-icon" src="../../assets/image-icon/Lightning.png" alt="Cloudy"></div>
+                        <div>1<img class="weather-icon" src="../../assets/image-icon/black.png" alt="Cloudy"></div>
+                        <div>2<img class="weather-icon" src="../../assets/image-icon/sun.png" alt="Cloudy"></div>
+                        <div>3<img class="weather-icon" src="../../assets/image-icon/sun.png" alt="Cloudy"></div>
+                    </div>
+                </div>
+
+                <div class="weather-panel">
+                    <h2 id="weather-date">Monday, January 15</h2>
+                    <div class="temperature" id="weather-temperature">28°C</div>
+                    <img id="weather-icon" src="../../assets/image-icon/calendar.png" alt="Weather Icon">
+                    <div class="sunrise-sunset">
+                        <div class="sunrise">
+                            <img src="../../assets/image-icon/sunrise.png" style="width: 50px;" alt="sunrise-img">
+                            <span id="sunrise-time">7:12</span>
+                        </div>
+                        <div class="sunset">
+                            <img src="../../assets/image-icon/sunset.png" style="width: 50px;" alt="sunset-img">
+                            <span id="sunset-time">7:42</span>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+
+        </div>
+
+        <!-- =========== Scripts =========  -->
+        <script src="../js/api/calendar.js"></script>
+        <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+        <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+</body>
+
+</html>
