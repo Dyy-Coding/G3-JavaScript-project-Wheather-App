@@ -11,53 +11,66 @@ function deleteKeysFromLocalStorage(keys) {
 
 // List of keys to delete
 const keysToDelete = [
-    "Chandy neat"
-   
+ 
+      "registrationData"
 
 
 ];
 
 // Call the function to delete the specified keys
 deleteKeysFromLocalStorage(keysToDelete);
+// User Registration
 document.getElementById("submit-register").addEventListener("click", (e) => {
     e.preventDefault();
-    
+
     // Retrieve values from input fields
+    const pictureProfile = document.getElementById("profile-pic").value;
     const name = document.getElementById("name").value;
     const email = document.getElementById("email").value;
     const password = document.getElementById("password").value;
+
+    // Simple email validation
+    const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailPattern.test(email)) {
+        alert("Please enter a valid email address.");
+        return;
+    }
 
     // Check if all fields are filled
     if (name && email && password) {
         // Create an object to hold the registration data
         let dataRegister = {
+          
             Name: name,
             Email: email,
-            Password: password
+            Password: password, // Consider hashing for security  
+            Profile: pictureProfile || 'default-profile.jpg', // Include profile picture
         };
-      
+
         // Store the object in localStorage as a JSON string
         localStorage.setItem("registrationData", JSON.stringify(dataRegister));
-        
-        // Optional: Confirm storage
+
+        // Confirm storage
         console.log("Stored data:", dataRegister);
         
+        // Provide feedback
+        alert("Registration successful!");
+
         // Redirect to the desired page
-        window.location.href = "../../index.html"; 
-        
+        window.location.href = "../../index.html";
+
         // Reset input values
         document.getElementById("name").value = "";
         document.getElementById("email").value = "";
         document.getElementById("password").value = "";
+        document.getElementById("profile-pic").value = ""; // Reset profile picture input
     } else {
         alert("Please fill in all fields.");
     }
 });
 
-    
-  //=======================get data from form Register============================//
-  //=======================get data from form login============================//
-  document.getElementById("submit-login").addEventListener("click", (e) => {
+// User Login
+document.getElementById("submit-login").addEventListener("click", (e) => {
     e.preventDefault();
     
     // Retrieve values from input fields
@@ -73,6 +86,9 @@ document.getElementById("submit-register").addEventListener("click", (e) => {
 
             // Validate the login credentials
             if (dataRegister.Email === emailLogin && dataRegister.Password === passwordLogin) {
+                // Provide feedback
+                alert("Login successful!");
+
                 // Redirect to the desired page
                 window.location.href = "../../index.html"; 
 
@@ -90,5 +106,3 @@ document.getElementById("submit-register").addEventListener("click", (e) => {
     }
 });
 
-  //=======================get data from form login============================//
-  

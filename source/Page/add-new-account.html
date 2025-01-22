@@ -113,7 +113,7 @@
                         </a>
                         <a href="./profile.html">
                             <div class="user">
-                                <img src="../../assets/image/photo_2024-11-11_18-45-00.jpg" alt="User profile picture">
+                                <img  src="../../assets/image/photo_2024-11-11_18-45-00.jpg" alt="User profile picture">
                             </div>
                         </a>
                     </div>
@@ -131,6 +131,10 @@
                     <form>
                         <h1>Register Account</h1>
                         <div class="social-icons">
+                        </div>
+                        <div class="circle">
+                            <input type="file" accept="image/*" id="profile-pic" onchange="loadFile(event)">
+                            <img id="output" style="width: 100%; height: 100%; object-fit: cover; display: none;" />
                         </div>
                         <input type="text" id="name" placeholder="Name">
                         <input type="email" id="email" placeholder="Email">
