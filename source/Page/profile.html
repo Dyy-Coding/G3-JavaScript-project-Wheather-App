@@ -10,8 +10,7 @@
     <link rel="stylesheet" href="../css/index.css">
     <link rel="stylesheet" href="../css/profile.css">
     <!-- ======= Favicon ====== -->
-     <link rel="shortcut icon" href="../../assets/image-icon/logo-favicon.png" type="image/x-icon">
-
+    <link rel="shortcut icon" href="../../assets/image-icon/logo-favicon.png" type="image/x-icon">
 </head>
 
 <body>
@@ -22,106 +21,44 @@
                 <li>
                     <a href="#">
                         <span class="icon">
-                            <img id="image-logo" src="../../assets/image-icon/logo-favicon.png" alt="logo-weather-app">
+                            <img id="image-logo" src="../../assets/image-icon/logo-favicon.png" alt="Weather World Logo">
                         </span>
                         <span class="title">Weather World</span>
                     </a>
                 </li>
 
-                <li>
-                    <a  href="../../index.html">
-                        <span class="icon">
-                            <ion-icon name="home-outline"></ion-icon>
-                        </span>
-                        <span  class="title">Home</span>
-                    </a>
-                </li>
-
-                <li>
-                    <a href="forecast.html">
-                        <span class="icon">
-                            <ion-icon name="cloud-outline"></ion-icon>
-                        </span>
-                        <span class="title">Forecast</span>
-                    </a>
-                </li>
-
-                <li>
-                    <a href="analytic.html">
-                        <span class="icon">
-                            <ion-icon name="analytics-outline"></ion-icon>
-                        </span>
-                        <span class="title">Analytic</span>
-                    </a>
-                </li>
-
-                <li>
-                    <a href="location.html">
-                        <span class="icon">
-                            <ion-icon name="location-outline"></ion-icon>
-                        </span>
-                        <span class="title">Location</span>
-                    </a>
-                </li>
-                <li>
-                    <a href="calendar.html">
-                        <span class="icon">
-                            <ion-icon name="calendar-outline"></ion-icon>
-                        </span>
-                        <span class="title">Calendar</span>
-                    </a>
-                </li>
-
-                <li>
-                    <a href="setting.html">
-                        <span class="icon">
-                            <ion-icon name="settings-outline"></ion-icon>
-                        </span>
-                        <span class="title">Settings</span>
-                    </a>
-                </li>
-
-
-                <li>
-                    <a href="add-new-account.html">
-                        <span class="icon">
-                            <ion-icon name="person-add-outline"></ion-icon>
-                        </span>
-                        <span class="title">Add new account</span>
-                    </a>
-                </li>
-
+                <li><a href="../../index.html"><span class="icon"><ion-icon name="home-outline"></ion-icon></span><span class="title">Home</span></a></li>
+                <li><a href="forecast.html"><span class="icon"><ion-icon name="cloud-outline"></ion-icon></span><span class="title">Forecast</span></a></li>
+                <li><a href="analytic.html"><span class="icon"><ion-icon name="analytics-outline"></ion-icon></span><span class="title">Analytic</span></a></li>
+                <li><a href="location.html"><span class="icon"><ion-icon name="location-outline"></ion-icon></span><span class="title">Location</span></a></li>
+                <li><a href="calendar.html"><span class="icon"><ion-icon name="calendar-outline"></ion-icon></span><span class="title">Calendar</span></a></li>
+                <li><a href="setting.html"><span class="icon"><ion-icon name="settings-outline"></ion-icon></span><span class="title">Settings</span></a></li>
+                <li><a href="add-new-account.html"><span class="icon"><ion-icon name="person-add-outline"></ion-icon></span><span class="title">Add new account</span></a></li>
             </ul>
-
-
         </div>
+
         <header class="head">
             <nav>
                 <div class="topbar">
                     <div class="group-menu-and-search">
                         <span class="icon">
-                            <img id="image-logo-responsive" src="../../assets/image-icon/logo-favicon.png" alt="logo-weather-app">
+                            <img id="image-logo-responsive" src="../../assets/image-icon/logo-favicon.png" alt="Weather World Logo">
                         </span>
-                        <div class="toggle">
-                            <ion-icon name="menu-outline"></ion-icon>
-                        </div>
-        
+                        <div class="toggle"><ion-icon name="menu-outline"></ion-icon></div>
                         <div class="search">
                             <label>
-                                <input type="search" placeholder="Search here">
+                                <input type="search" placeholder="Search here" aria-label="Search">
                                 <ion-icon name="search-outline"></ion-icon>
                             </label>
                         </div>
                     </div>
                     <div class="group-notif-profile">
                         <a href="./notification.html">
-                            <div class="notification">
-                                <ion-icon name="notifications-outline" id="notification"></ion-icon>
-                            </div>
+                            <div class="notification"><ion-icon name="notifications-outline" id="notification"></ion-icon></div>
                         </a>
                         <a href="./profile.html">
                             <div class="user">
-                                <img src="../../assets/image/photo_2024-11-11_18-45-00.jpg" alt="">
+                                <img id="profile-icon" src="../../assets/image/none_profile.png" alt="User Profile Icon">
                             </div>
                         </a>
                     </div>
@@ -131,7 +68,7 @@
 
         <!-- ========================= Main ==================== -->
         <div class="main">
-            <!-- ======================= profile ================== -->
+            <!-- ======================= Profile ================== -->
             <div class="edite-container">
                 <header class="edit-profile-header">
                     <h1>Edit Profile</h1>
@@ -141,26 +78,26 @@
                         <div class="form-group">
                             <label for="profile-pic">Profile Picture</label>
                             <div class="profile-pic-preview">
-                                <img src="../../assets/image/photo_2024-11-11_18-45-00.jpg" alt="Current Profile Picture" id="profile-pic-preview">
-                                <input type="file" id="profile-pic" accept="image/*">
+                                <img src="../../assets/image/none_profile.png" alt="Current Profile Picture" id="profile-pic-preview">
+                                <input type="file" id="profile-pic" accept="image/*" aria-label="Upload Profile Picture">
                             </div>
                         </div>
-        
+
                         <div class="form-group">
                             <label for="name">Name</label>
-                            <input type="text" id="name" value="Chandy Neat" placeholder="Enter your name" required>
+                            <input type="text" id="name" placeholder="Enter your name" required aria-label="Name">
                         </div>
-        
+
                         <div class="form-group">
                             <label for="email">Email</label>
-                            <input type="email" id="email" value="chandyneat9999@gmail.com" placeholder="Enter your email" required>
+                            <input type="email" id="email" placeholder="Enter your email" required aria-label="Email">
                         </div>
-        
+
                         <div class="form-group">
                             <label for="location">Location</label>
-                            <input type="text" id="location" value="Phnom Penh, Cambodia" placeholder="Enter your location" required>
+                            <input type="text" id="location" placeholder="Enter your location" required aria-label="Location">
                         </div>
-        
+
                         <div class="form-actions">
                             <button type="submit" class="btn save-btn">Save Changes</button>
                             <button type="button" class="btn cancel-btn">Cancel</button>
@@ -168,68 +105,68 @@
                     </form>
                 </div>
             </div>
+
             <div class="profile">
                 <div class="profile-header">
-                    <img id="profile" src="../../assets/image/photo_2024-11-11_18-45-00.jpg" alt="User Profile Picture" class="profile-img">
-                    <h2 id="profile-name" class="profile-name name">Chandy Neat</h2>
+                    <img id="profile" src="../../assets/image/none_profile.png" alt="User Profile Picture" class="profile-img">
+                    <h2 id="profile-name" class="profile-name name">User</h2>
                 </div>
-            
+
                 <div class="profile-details">
                     <div class="profile-detail-item">
-
                         <h4>Name:</h4>
-                        <p id="name" class="name">Chandy Neat</p>
+                        <p id="name-detail" class="name">Name</p>
                     </div>
                     <div class="profile-detail-item">
                         <h4>Email:</h4>
-                        <p id="email" >chandyneat9999@gmail.com</p>
+                        <p id="email-detail">Email</p>
                     </div>
                     <div class="profile-detail-item">
                         <h4>Location:</h4>
-                        <p id="location">Phnom Penh, Cambodia</p>
+                        <p id="location-detail">Location</p>
                     </div>
                     <div class="profile-detail-item">
                         <h4>Joined:</h4>
-                        <p id="date-sign">January 2025</p>
+                        <p id="date-sign">Date</p>
                     </div>
                 </div>
-            
+
                 <div class="profile-actions">
                     <button id="btn-edit-profile" class="btn edit-profile-btn">Edit Profile</button>
                     <button class="btn logout-btn">Log Out</button>
                 </div>
             </div>
-            
+
             <div class="create-post">
                 <h2>Create a Post</h2>
                 <form class="post-form">
                     <div class="form-group">
                         <label for="post-title">Title</label>
-                        <input type="text" id="post-title" placeholder="Enter your post title" required>
+                        <input type="text" id="post-title" placeholder="Enter your post title" required aria-label="Post Title">
                     </div>
-            
+
                     <div class="form-group">
                         <label for="post-media">Upload Image/Video</label>
-                        <input type="file" id="post-media" accept="image/*, video/*" required>
+                        <input type="file" id="post-media" accept="image/*, video/*" required aria-label="Upload Image or Video">
                     </div>
-            
+
                     <div class="form-group">
                         <label for="post-details">Details</label>
-                        <textarea id="post-details" placeholder="Write something about your post" rows="5" required></textarea>
+                        <textarea id="post-details" placeholder="Write something about your post" rows="5" required aria-label="Post Details"></textarea>
                     </div>
-            
+
                     <button type="submit" class="btn submit-post-btn">Post</button>
                 </form>
             </div>
-            
-            
         </div>
-        
     </div>
+
+
 
     <!-- =========== Scripts =========  -->
     <script src="../js/index.js"></script>
     <script src="../js/page-js/form.js"></script>
+    <script src="../js/page-js/profile.js"></script>
 
     <!-- ====== ionicons ======= -->
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
