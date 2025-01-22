@@ -296,6 +296,7 @@ nav {
 }
 
 .cardBody {
+  background-color: white;
   display: flex;
   flex-direction: column;
   /* justify-content: space-between; */
@@ -310,7 +311,7 @@ nav {
 }
 
 .cardBody .local .imageBox img {
-  width: 300px;
+  width: 250px;
   height: auto;
 }
 
@@ -347,6 +348,10 @@ nav {
   margin: 10px 0;
   color: #555;
 }
+/* .card .cardBody:hover{
+  background-color: #1795ce;
+
+} */
 
 .cardBody p::before {
   content: '';
@@ -484,6 +489,22 @@ hr{
   text-align: center;
 }
 
+/* .weekly-forecast:hover{
+  background-color: #1795ce;
+  border-radius: 15px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+
+} */
+.weekly-forecast:hover {
+  background-color: #1795ce;
+  border-radius: 15px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transform: scale(1.05); /* Example: Slightly enlarge the element */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add a shadow effect */
+}
+
+
 .status.delivered {
   padding: 2px 4px;
   background: #8de02c;
@@ -607,7 +628,7 @@ hr{
     width: 580px;
   }
 
-  .details {
+  .details { 
     grid-template-columns: 1fr;
   }
 
@@ -685,6 +706,35 @@ hr{
   .cardHeader h2 {
     font-size: 20px;
   }
+  .navigation {
+    width: 100%;
+    top: 50px;
+    left: -100%;
+    z-index: 1000;
+  }
+
+  .navigation.active {
+    width: 70%;
+    left: 0;
+  }
+
+  .toggle {
+    z-index: 10001;
+  }
+
+  .main.active .toggle {
+    color: #fff;
+    position: fixed;
+    right: 0;
+    left: initial;
+  }
+  .cardBox {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .cardHeader h2 {
+    font-size: 20px;
+  }
 
   .navigation {
     width: 100%;
@@ -708,4 +758,39 @@ hr{
     right: 0;
     left: initial;
   }
+
+  /* Adjust Card layout for Mobile */
+  .cardBox {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .card {
+    width: 100%;
+    padding: 20px;
+    margin: 10px 0;
+  }
 }
+@media (max-width: 480px) {
+  .cardBox {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin: 0;
+  }
+
+  .card {
+    width: 100%;
+    padding: 15px;
+    margin: 0 auto;
+  }
+
+  .main {
+    margin: 0;
+    padding: 0;
+  }
+}
+
+
+
