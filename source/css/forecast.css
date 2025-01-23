@@ -253,6 +253,7 @@ nav {
   height: 100%;
   object-fit: cover;
 }
+
 /* ======================= Cards ====================== */
 .cardBox {
   /* position: relative; */
@@ -273,7 +274,7 @@ nav {
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  text-align: center;
+  text-align: justify;
   box-shadow: 0 7px 25px rgba(0, 0, 0, 0.08);
   background-color: white;
   padding: 30px;
@@ -296,22 +297,24 @@ nav {
 }
 
 .cardBody {
-  background-color: white;
   display: flex;
   flex-direction: column;
   /* justify-content: space-between; */
   align-items: start;
   width: 100%;
 }
+
 .cardBody .local {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
+  flex-wrap: wrap-reverse;
+  /* flex-direction: column-reverse; */
   align-items: center;
   width: 100%;
 }
 
 .cardBody .local .imageBox img {
-  width: 250px;
+  width: 300px;
   height: auto;
 }
 
@@ -327,6 +330,16 @@ nav {
   font-size: 1.5rem;
   font-weight: bold;
   margin-bottom: 5px;
+}
+
+
+.day {
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.day:hover {
+  background-color: #1795ce;/* #change color here; */
+  transform: scale(1.05);
 }
 
 .cardBody .weatherToday .condition {
@@ -345,13 +358,9 @@ nav {
 
 .cardBody p {
   font-size: 1rem;
-  margin: 10px 0;
+  margin: 22px 0;
   color: #555;
 }
-/* .card .cardBody:hover{
-  background-color: #1795ce;
-
-} */
 
 .cardBody p::before {
   content: '';
@@ -403,7 +412,7 @@ nav {
 
 .details .recentOrders .weekly-forecast {
   display: flex;
-  flex:9;
+  flex: 9;
   justify-content: space-evenly;
   gap: 10px;
   /* background-color: orange; */
@@ -418,7 +427,7 @@ nav {
   border: 3px solid black;
   /* border-right: 3px solid #ffffff; */
   border-radius: 15px;
- 
+
 
   /* background-color: pink; */
 
@@ -431,7 +440,7 @@ nav {
 
 /* //====already card day===// */
 
-hr{
+hr {
   width: 200%;
 }
 
@@ -488,22 +497,6 @@ hr{
 .details .recentOrders table tr td:nth-child(3) {
   text-align: center;
 }
-
-/* .weekly-forecast:hover{
-  background-color: #1795ce;
-  border-radius: 15px;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-
-
-} */
-.weekly-forecast:hover {
-  background-color: #1795ce;
-  border-radius: 15px;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  transform: scale(1.05); /* Example: Slightly enlarge the element */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add a shadow effect */
-}
-
 
 .status.delivered {
   padding: 2px 4px;
@@ -614,10 +607,46 @@ hr{
     left: 300px;
   }
 
+  /* ======================
+   Tablet Forecast Page
+  ====================== */
   .cardBox {
     grid-template-columns: repeat(2, 1fr);
   }
+
+  .cardBox .card {
+    justify-content: start;
+    text-align: justify;
+    /* padding: 0; */
+  }
+
+  .cardHeader {
+    text-align: center;
+
+  }
+
+  .cardBody .local .imageBox img {
+    width: 200px;
+    height: auto;
+  }
+
+  .cardBody .local {
+    flex-direction: column-reverse;
+    /* justify-content: center; */
+    margin-top: 25%;
+
+  }
+
+  .cardBody .weatherToday .temperature {
+    margin-top: 0;
+  }
+
+  .cardBody .local .weatherToday:nth-child(1) {
+    padding-top: 0px;
+  }
 }
+
+
 
 @media (max-width: 768px) {
   nav {
@@ -628,7 +657,7 @@ hr{
     width: 580px;
   }
 
-  .details { 
+  .details {
     grid-template-columns: 1fr;
   }
 
@@ -639,6 +668,20 @@ hr{
   .status.inProgress {
     white-space: nowrap;
   }
+
+   /* ======================
+   Tablet Forecast Page
+  ====================== */
+
+  .cardBox {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .cardBox .card {
+    width: 100%;
+  }
+  
 }
 
 @media (max-width: 480px) {
@@ -706,35 +749,6 @@ hr{
   .cardHeader h2 {
     font-size: 20px;
   }
-  .navigation {
-    width: 100%;
-    top: 50px;
-    left: -100%;
-    z-index: 1000;
-  }
-
-  .navigation.active {
-    width: 70%;
-    left: 0;
-  }
-
-  .toggle {
-    z-index: 10001;
-  }
-
-  .main.active .toggle {
-    color: #fff;
-    position: fixed;
-    right: 0;
-    left: initial;
-  }
-  .cardBox {
-    grid-template-columns: repeat(1, 1fr);
-  }
-
-  .cardHeader h2 {
-    font-size: 20px;
-  }
 
   .navigation {
     width: 100%;
@@ -759,38 +773,7 @@ hr{
     left: initial;
   }
 
-  /* Adjust Card layout for Mobile */
-  .cardBox {
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-  }
-
-  .card {
-    width: 100%;
-    padding: 20px;
-    margin: 10px 0;
+  .weekly-forecast {
+    flex-wrap: wrap;
   }
 }
-@media (max-width: 480px) {
-  .cardBox {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    margin: 0;
-  }
-
-  .card {
-    width: 100%;
-    padding: 15px;
-    margin: 0 auto;
-  }
-
-  .main {
-    margin: 0;
-    padding: 0;
-  }
-}
-
-
-

@@ -24,32 +24,36 @@ function fetchWeather(city) {
 }
 
 // Function to update the current weather UI  //  note: I just copy it from stack overflow --------------------------------
+
 function updateWeatherUI(data) {
-    const { name, weather, main } = data; 
+    const {  weather, main } = data; 
     const temperature = Math.round(main.temp);
     console.log(data);
 
-    // Update the HTML elements with the new data
-    cityElement.textContent = name.toUpperCase();
-    conditionElement.textContent = weather[0].description.toUpperCase(); // Weather description
-    temperatureElement.innerHTML = `${temperature}°C <br>${Math.round((temperature * 9) / 5 + 32)}°F`; // Show temp in °C and °F
+    const currentDate = new Date();
+    const daysOfWeek = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+    const currentDay = daysOfWeek[currentDate.getDay()];
 
-    // Update the weather image based on the temperature
+    cityElement.textContent = currentDay.toUpperCase()
+    conditionElement.textContent = weather[0].description.toUpperCase();
+    temperatureElement.innerHTML = `${temperature}°C <br>${Math.round((temperature * 9) / 5 + 32)}°F`;
+
     const tempImage = getImageByTemperature(temperature);
-    weatherImage.src = tempImage; // Update the image source
+    weatherImage.src = tempImage;
 }
+
 
 // Function to choose an image based on the temperature
 // ---------------------------------------- change image here --------------------------------
 function getImageByTemperature(temp) {
     if (temp >= 30) {
-        return "../../assets/weathers/sun.png"; // Hot and sunny
+        return "../../assets/image-icon/sun.png"; // Hot and sunny
     } else if (temp >= 20 && temp < 30) {
-        return "../../assets/weathers/cloud.png"; // Warm and cloudy
+        return "../../assets/image-icon/sun.png"; // Warm and cloudy
     } else if (temp >= 10 && temp < 20) {
-        return "../../assets/weathers/rain.png"; // Cool and rainy
+        return "../../assets/image-icon/sun.png"; // Cool and rainy
     } else {
-        return "../../assets/weathers/snow.png"; // Cold and snowy
+        return "../../assets/image-icon/Lightning.png"; // Cold and snowy
     }
 }
 
@@ -67,28 +71,27 @@ function fetchWeeklyForecast(city) {
 }
 
 // Function to update the weekly forecast UI // stack overflow
+
 function updateWeeklyForecastUI(data) {
     const { list } = data;
+    console.log("updateWeeklyForecastUI", data);
 
-    // Clear the weekly forecast container before adding new content
     weeklyForecastContainer.innerHTML = "";
     const dailyDataMap = new Map();
     list.forEach((entry) => {
-        const date = new Date(entry.dt_txt); // Convert the date
-        const day = date.toISOString().split("T")[0]; // Get only the YYYY-MM-DD part
+        const date = new Date(entry.dt_txt);
+        const day = date.toISOString().split("T")[0];
         // console.log(day);
         
-        // Keep the closest entry to 12:00 PM for each day
         if (
             !dailyDataMap.has(day) ||
-            Math.abs(date.getHours() - 12) < Math.abs(new Date(dailyDataMap.get(day).dt_txt).getHours() - 24)
+            Math.abs(date.getHours() - 12) < Math.abs(new Date(dailyDataMap.get(day).dt_txt).getHours() - 12)
         ) {
             dailyDataMap.set(day, entry);
         }
     });
 
-    // Get the next 7 days of data and display them // I don't know why It's not display saturday 
-    const dailyData = Array.from(dailyDataMap.values()).slice(0, 7);
+    const dailyData = Array.from(dailyDataMap.values()).slice(1, 7);
 
     dailyData.forEach((day) => {
         const date = new Date(day.dt_txt);
