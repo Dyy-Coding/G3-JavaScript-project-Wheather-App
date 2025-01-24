@@ -1,21 +1,21 @@
 //=======================get data from form Register============================//
-function deleteKeysFromLocalStorage(keys) {
-    keys.forEach(key => {
-        localStorage.removeItem(key);
-        console.log(`Deleted key: ${key}`);
-    });
+// function deleteKeysFromLocalStorage(keys) {
+//     keys.forEach(key => {
+//         localStorage.removeItem(key);
+//         console.log(`Deleted key: ${key}`);
+//     });
   
-}
+// }
 
-// Function to delete keys from localStorage
+// // Function to delete keys from localStorage
 
-// List of keys to delete
-const keysToDelete = [
+// // List of keys to delete
+// const keysToDelete = [
  
-      "registrationData"
+//    "postDetails","postTitle"
 
 
-];
+// ];
 
 // Call the function to delete the specified keys
 deleteKeysFromLocalStorage(keysToDelete);

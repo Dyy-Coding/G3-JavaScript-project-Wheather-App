@@ -1,0 +1,235 @@
+/* ===== Variables for Theme Colors ===== */
+:root {
+    --primary-color: #4a90e2; /* Sky blue */
+    --secondary-color: #ffffff; /* White */
+    --accent-color: #f4a261; /* Warm yellow-orange for accents */
+    --text-color: #333333; /* Dark gray for readability */
+    --background-color: #f0f8ff; /* Light sky blue */
+    --border-color: #d0e6f6; /* Light grayish blue for borders */
+    --hover-color: #428bca; /* Darker blue for hover effects */
+    --shadow-color: rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+
+/* ===== General Layout ===== */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    margin: 0;
+    padding: 0;
+}
+
+.main {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    padding: 20px;
+}
+
+/* ===== Form Group Styling ===== */
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: var(--text-color);
+}
+
+.form-group input[type="text"],
+.form-group input[type="file"],
+.form-group textarea {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    background-color: var(--secondary-color);
+    box-shadow: 0 2px 4px var(--shadow-color);
+    font-size: 16px;
+    transition: border-color 0.3s, background-color 0.3s;
+}
+
+.form-group textarea {
+    resize: none;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    border-color: var(--primary-color);
+    background-color: #eaf4fd; /* Light blue background for focus */
+    outline: none;
+}
+
+/* ===== Button Styling ===== */
+.btn {
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.btn:hover {
+    background-color: var(--hover-color);
+    transform: translateY(-2px); /* Slight lift on hover */
+}
+
+.btn:active {
+    transform: translateY(0); /* Reset lift on click */
+}
+
+/* ===== Create Post Section ===== */
+.create-post {
+    padding: 20px;
+    background-color: var(--secondary-color);
+    border-radius: 10px;
+    box-shadow: 0 4px 10px var(--shadow-color);
+    margin-bottom: 20px;
+}
+
+.create-post .success-message {
+    display: none;
+    margin-top: 15px;
+    color: var(--accent-color);
+}
+
+/* ===== Result Display Styling ===== */
+.result-display {
+    background: var(--secondary-color);
+    padding: 20px;
+    border: 1px solid var(--border-color);
+    border-radius: 5px;
+    box-shadow: 0 2px 5px var(--shadow-color);
+    margin-top: 20px;
+}
+
+/* General container styling for posts */
+.post, .post-preview {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 16px;
+    margin-bottom: 16px;
+    background-color: #fff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Media container */
+.post img, .post video, .post-preview img, .post-preview video {
+    display: block;
+    max-width: 100%;
+    border-radius: 8px;
+    margin: 12px 0;
+    object-fit: cover;
+}
+
+/* Images */
+.post img, .post-preview img {
+    max-height: 300px; /* Prevents overly tall images */
+    width: 100%; /* Makes the image responsive */
+}
+
+/* Videos */
+.post video, .post-preview video {
+    max-height: 400px; /* Limits video height */
+    width: 100%; /* Makes the video responsive */
+}
+
+/* Media container layout */
+.post, .post-preview {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+/* Title styling */
+.post h3, .post-preview h3 {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 8px;
+    color: #333;
+}
+
+/* Details text */
+.post p, .post-preview p {
+    font-size: 1rem;
+    color: #555;
+    margin: 6px 0;
+}
+
+/* Buttons */
+.post button {
+    padding: 8px 16px;
+    border: none;
+    border-radius: 4px;
+    background-color: #f44336;
+    color: #fff;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+}
+
+.post button:hover {
+    background-color: #d32f2f;
+}
+
+
+
+.media-text {
+    font-size: 14px;
+    color: #666;
+}
+
+/* ===== Responsive Design ===== */
+@media (max-width: 768px) {
+    .main {
+        flex-direction: column;
+        padding: 10px;
+    }
+
+    .create-post {
+        padding: 15px;
+    }
+
+    .btn {
+        font-size: 14px;
+        padding: 8px 12px;
+    }
+}
+/* Container for media */
+#resultDisplay {
+    display: flex; /* Use flexbox for layout */
+    flex-direction: column; /* Stack items vertically */
+    align-items: center; /* Center items horizontally */
+}
+
+/* Styling for images */
+#resultImage {
+    max-width: 100%; /* Responsive width */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 10px; /* Optional rounded corners */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Optional shadow */
+}
+
+/* Styling for videos */
+#resultVideo {
+    max-width: 100%; /* Responsive width */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 10px; /* Optional rounded corners */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Optional shadow */
+}
+
+/* Optional: Set a specific size for larger screens */
+@media (min-width: 768px) {
+    #resultImage,
+    #resultVideo {
+        width: 600px; /* Set a specific width */
+        height: 400px; /* Set a specific height */
+    }
+}
