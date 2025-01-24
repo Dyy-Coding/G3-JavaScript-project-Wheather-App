@@ -11,24 +11,24 @@ function fetchWeather(city) {
             updateWeatherUI(data);
         })
         .catch((error) => {
-            console.error("Error fetching weather data:", error); 
+            console.error("Error fetching weather data:", error);
         });
 }
 
 // Function to update the current weather UI
 function updateWeatherUI(data) {
-    const { name, weather, main, sys } = data; 
-    const temperature = Math.round(main.temp); 
+    const { name, weather, main, sys } = data;
+    const temperature = Math.round(main.temp);
     const sunrise = new Date(sys.sunrise * 1000).toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' });
     const sunset = new Date(sys.sunset * 1000).toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' });
     const currentDate = new Date().toLocaleDateString('en-US', { weekday: 'long', month: 'long', day: 'numeric' });
     // Update the weather panel
-    document.getElementById("weather-date").textContent = currentDate; 
-    document.getElementById("weather-temperature").textContent = `${temperature}°C`; 
+    document.getElementById("weather-date").textContent = currentDate;
+    document.getElementById("weather-temperature").textContent = `${temperature}°C`;
     // document.getElementById("weather-icon").src = getImageByTemperature(temperature);
     // document.getElementById("weather-icon").alt = weather[0].description;
-    document.getElementById("sunrise-time").textContent = sunrise; 
-    document.getElementById("sunset-time").textContent = sunset; 
+    document.getElementById("sunrise-time").textContent = sunrise;
+    document.getElementById("sunset-time").textContent = sunset;
 }
 
 
@@ -44,5 +44,21 @@ function getImageByTemperature(temp) {
         return "../../assets/image-icon/sunset.png"; // Cold and snowy
     }
 }
+
+// to Highlight current date that style in calendar.css line 456
+document.addEventListener("DOMContentLoaded", function () {
+    const today = new Date();
+    const localDate = new Date(today.toLocaleString("en-US", { timeZone: "Asia/Phnom_Penh" })); // Get today's date in the Cambodia time zone (Asia/Phnom_Penh)
+
+    // Extract the local date in "YYYY-MM-DD" format  from stack overflow
+    const todayString = localDate.getFullYear().toString().padStart(4, '0') + '-' +
+        (localDate.getMonth() + 1).toString().padStart(2, '0') + '-' +
+        localDate.getDate().toString().padStart(2, '0');
+    const todayElement = document.querySelector(`[data-date="${todayString}"]`);
+    if (todayElement) {
+        todayElement.classList.add("active");
+    }
+});
+
 
 fetchWeather(defaultCity);
