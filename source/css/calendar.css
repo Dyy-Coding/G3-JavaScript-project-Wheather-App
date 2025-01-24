@@ -358,7 +358,11 @@ nav {
 
 /* Calendar Section */
 .calendar {
-  flex: 2;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex: 3;
   background-color: white;
   border-radius: 10px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
@@ -373,15 +377,17 @@ nav {
 .calendar-grid {
   display: grid;
   grid-template-columns: repeat(7, 1fr);
-  gap: 0;
+  /* gap: 4px; */
   border-collapse: collapse;
+  /* border: solid 1px #ccc; */
 }
 
-.calendar-grid div {
-  border: 1px solid #ddd;
+.calendar-grid .week-day{
+  border: 2px solid #dcdcdc;
   text-align: center;
   padding: 10px;
   font-size: 14px;
+  font-weight: 600;
   position: relative;
 }
 
@@ -396,18 +402,80 @@ nav {
   margin-top: 10px;
 }
 
+
+
+/* ----------------------------------------------------------
+/* ----------------------------------------------------------
+/* ----------------------------------------------------------
+/* /* ---------------------------------------------------------- */
+.weather-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(to bottom, #e3f2fd, #90caf9);
+  border: 1px solid #90caf9;
+  border-radius: 4px;
+  /* padding: 15px; */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  /* width: 100px; */
+  margin: 5px;
+  color: #333;
+  text-align: center;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.weather-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
+}
+
+.date {
+  font-size: 1em;
+  font-weight: 500;
+  color: #1e88e5;
+  margin-top: 5px;
+}
+
+.weather-icon-wrapper {
+  background: #fff;
+  border-radius: 50%;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+.weather-icon {
+  width: 80%;
+}
+
+.temperature {
+  margin: 10px 0 ;
+  font-size: 1em;
+  font-weight: 500;
+  color: #424242;
+}
+
+
 /* Weather Panel Section */
 .weather-panel {
   flex: 1;
-  background-color:#5dade2 ;
+  
+  /* background-color:#5dade2 ; */
+  background: linear-gradient(to bottom, #e3f2fd, #90caf9);
+
   border-radius: 10px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   padding: 20px;
   display: flex;
   flex-direction: column;
+  height: 86vh;
+  position: sticky;
+  top: 10vh;
   align-items: center;
 }
-
+#weather-temperature{
+  margin-top:15%;
+}
 .weather-panel h2 {
   font-size: 16px;
   margin-bottom: 10px;
@@ -421,7 +489,7 @@ nav {
 
 .weather-panel img {
 
-  width: 250px;
+  width: 80%;
   border-radius: 10px;
   margin-bottom: 10px;
 }
@@ -442,14 +510,24 @@ nav {
 
 .weather-panel .sunrise-sunset .sunset, .weather-panel .sunrise-sunset .sunrise{
   display: flex;
+  flex-direction: column;
   align-items: center;
   gap: 20px;
 }
+
 
 #sunset-time, #sunrise-time{
   font-size: 22px;
   font-weight: 600;
 }
+
+/* Highlight the current day */
+.calendar-grid div.active {
+  border: 2px solid #ff9800;
+  background-color: #ffe0b2;
+  border-radius: 5px;
+}
+
 
 @media (max-width: 991px) {
   .navigation {
@@ -495,6 +573,36 @@ nav {
   .status.inProgress {
     white-space: nowrap;
   }
+
+  .container {
+    flex-direction: column-reverse;
+  }
+
+  #calendar-icon{
+    width: 50%;
+  }
+
+  .weather-panel {
+    position: relative;
+    top: 0;
+  }
+
+  .sunrise-sunset{
+    padding: 0 25%;
+  }
+
+  .weather-panel .sunrise-sunset .sunset, .weather-panel .sunrise-sunset .sunrise{
+    display: flex;
+    flex-direction: row;
+    /* justify-content: space-around; */
+    align-items: center;
+    gap: 20px;
+  }
+  #weather-temperature{
+    margin-top:0;
+  }
+
+ 
 }
 
 @media (max-width: 480px) {
@@ -631,4 +739,20 @@ nav {
     padding: 20px;
     margin: 10px 0;
   }
+
+  .weather-panel .sunrise-sunset .sunset, .weather-panel .sunrise-sunset .sunrise{
+    display: flex;
+    flex-direction: column;
+    /* padding: 0; */
+    /* background-color: white; */
+  }
+
+  #calendar-icon{
+    display: block;
+  }
+  .calendar {
+    padding: 10px;
+  }
+
+  
 }
