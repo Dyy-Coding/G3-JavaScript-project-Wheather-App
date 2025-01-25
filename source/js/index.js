@@ -104,3 +104,5 @@ document.getElementById('profile-pic').addEventListener('change', (e) => {
 
 //=========================profile==========================//
 //=========================Code back-end for search ==========================//
+
+//=========================Code back-end for search ==========================//

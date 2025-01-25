@@ -93,7 +93,7 @@
                         </div>
                         <div class="search">
                             <label>
-                                <input type="search" id="search-input" placeholder="Search here">
+                                <input type="search" onclick="getWeather()" id="search-input" placeholder="Search here" aria-label="Search Weather">
                                 <ion-icon id="search-button" name="search-outline"></ion-icon>
                             </label>
                             <div id="suggestions" class="suggestions"></div>
@@ -117,12 +117,17 @@
 
         <!-- ========================= Main ==================== -->
         <div class="main">
-            <div class="cardBox">
-            
+            <div class="cardBox"></div>   
+            <div class="current-weather">
+                <div class="weather-detail-today" id="weather-detail-today"></div>
+                <div class="weather-detail-seven-day" id="weather-detail-seven-day"></div>
+                <div id="loading-indicator" style="display: none;">Loading...</div>
             </div>
         </div>
+     
     </div>
-    <script src="./source/js/page-js/Search/Search.js"></script>
+    <script src="./source/js/index.js"></script>
+    <script src="./source/js/page-js/showWeather.js"></script>
     <script src="./source/js/page-js/profile.js"></script>
     <!-- ====== ionicons ======= -->
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>

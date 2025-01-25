@@ -1,6 +1,6 @@
-/* Main Section */
+
 .main {
-    flex-grow: 1;
+    flex-grow: 4;
     padding: 20px;
   }
   
@@ -27,6 +27,7 @@
     border: 1px solid #e5e7eb;
     border-radius: 6px;
     background-color: #f9fafb;
+    color: black;
   }
   
   /* Weekly Forecast Section */
