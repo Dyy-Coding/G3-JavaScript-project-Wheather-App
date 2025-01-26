@@ -131,3 +131,39 @@ document.getElementById('profile-icon').src = 'path/to/image.png';
 
 // Load stored weather data on page load
 document.addEventListener('DOMContentLoaded', loadStoredWeatherData);
+
+async function fetchLocationSuggestions(query) {
+    // Replace with actual API call to fetch location suggestions
+    const mockLocations = ['Paris', 'Phnom Penh', 'New York', 'Tokyo', 'London', 'Los Angeles', 'Berlin', 'Sydney'];
+    return mockLocations.filter(location => location.toLowerCase().includes(query.toLowerCase()));
+}
+
+document.getElementById('search-input').addEventListener('input', async function() {
+    const query = this.value;
+    const suggestionsDiv = document.getElementById('suggestions');
+    
+    if (query.length > 1) {
+        const suggestions = await fetchLocationSuggestions(query);
+        suggestionsDiv.innerHTML = suggestions.map(location => `<div class="suggestion-item">${location}</div>`).join('');
+        suggestionsDiv.style.display = suggestions.length ? 'block' : 'none';
+    } else {
+        suggestionsDiv.style.display = 'none';
+    }
+});
+
+// Add event listener for clicking on suggestions
+document.getElementById('suggestions').addEventListener('click', function(e) {
+    if (e.target && e.target.classList.contains('suggestion-item')) {
+        document.getElementById('search-input').value = e.target.textContent;
+        getWeather();
+        this.style.display = 'none'; // Hide suggestions after selection
+    }
+});
+
+// Hide suggestions when clicking outside
+document.addEventListener('click', function(e) {
+    const suggestionsDiv = document.getElementById('suggestions');
+    if (!suggestionsDiv.contains(e.target) && e.target.id !== 'search-input') {
+        suggestionsDiv.style.display = 'none';
+    }
+});
